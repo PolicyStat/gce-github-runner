@@ -298,6 +298,7 @@ function start_vm {
 
   gcloud compute instances create ${VM_ID} \
     --zone=${machine_zone} \
+    --enable-nested-virtualization \
     ${disk_size_flag} \
     ${boot_disk_type_flag} \
     --machine-type=${machine_type} \
